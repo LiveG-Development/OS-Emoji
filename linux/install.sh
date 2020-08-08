@@ -26,7 +26,7 @@ fi
 # Create a user font directory
 mkdir -p $XDG_DATA_HOME/fonts
 echo "Installing the font in $XDG_DATA_HOME/fonts/..."
-cp LiveG-Emoji.ttf $XDG_DATA_HOME/fonts/
+cp ../build/LiveG-Emoji.ttf $XDG_DATA_HOME/fonts/
 
 # Create a font config directory
 FONTCONFIG=$HOME/.config/fontconfig
