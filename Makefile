@@ -5,6 +5,9 @@
 TMP := /dev/shm
 #TMP := /tmp
 
+# Where to find scfbuild?
+SCFBUILD := SCFBuild/bin/scfbuild
+
 VERSION := 0.1.0
 FONT_PREFIX := LiveG-Emoji
 REGULAR_FONT := build/$(FONT_PREFIX).ttf
@@ -64,12 +67,8 @@ deb-package: linux-package
 	#debuild -S
 	#dput ppa:eosrei/fonts $(DEB_PACKAGE)_$(VERSION).changes
 
-# Build both versions of the fonts
 $(REGULAR_FONT): $(SVG_BW_FILES) $(SVG_COLOR_FILES) copy-extra
 	$(SCFBUILD) -c scfbuild.yml -o $(REGULAR_FONT) --font-version="$(VERSION)"
-
-$(OSX_FONT): $(SVG_BW_FILES) $(SVG_COLOR_FILES) copy-extra
-	$(SCFBUILD) -c scfbuild-osx.yml -o $(OSX_FONT) --font-version="$(VERSION)"
 
 copy-extra: build/svg-bw
 	cp $(SVG_EXTRA_BW)/* build/svg-bw/
