@@ -1,24 +1,18 @@
-Source: fonts-twemoji-svginot
+Source: liveg-emoji
 Section: fonts
 Priority: extra
 Standards-Version: 3.9.5
-Maintainer: Brad Erickson <eosrei@gmail.com>
+Maintainer: LiveG Technologies <hi@liveg.tech>
 Build-Depends: debhelper (>= 9)
-Homepage: https://github.com/eosrei/twemoji-color-font
+Homepage: https://github.com/LiveG-Development/OS-Emoji
 
-Package: fonts-twemoji-svginot
+Package: liveg-emoji
 Architecture: all
 Multi-Arch: foreign
 Depends:
   ${misc:Depends},
-  fontconfig,
-  ttf-bitstream-vera
+  fontconfig
 Enhances:
   firefox
-Description: Twitter Emoji color emoji SVGinOT font
- A color emoji SVGinOT font using Twitter for Everyone graphics with diversity
- and country flags.
- .
- Currently only Mozilla Firefox and Thunderbird support SVGinOT fonts.
- .
- Should not be installed at the same time as: fonts-emojione-svginot
+Description: The emoji font used on LiveG operating systems, based on [Twitter's
+  Twemoji](https://twemoji.twitter.com/).

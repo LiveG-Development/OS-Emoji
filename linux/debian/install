@@ -1,2 +1,2 @@
-TwitterColorEmoji-SVGinOT.ttf usr/share/fonts/truetype/emoji
-fontconfig/56-twemoji-color.conf etc/fonts/conf.avail
+LiveG-Emoji.ttf usr/share/fonts/truetype/emoji
+fontconfig/56-liveg-emoji.conf etc/fonts/conf.avail
